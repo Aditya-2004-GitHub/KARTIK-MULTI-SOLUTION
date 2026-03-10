@@ -1,0 +1,42 @@
+/* Services Page CSS */
+
+.service-card-corp {
+    transition: var(--transition);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.service-card-corp:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 150, 219, 0.1) !important;
+    border-color: rgba(0, 150, 219, 0.15) !important;
+    background-color: var(--white) !important;
+}
+
+.service-icon-corp {
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white);
+    border-radius: 50%;
+    margin-bottom: 25px;
+    font-size: 1.5rem;
+    color: var(--blue-primary);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: var(--transition);
+}
+
+.service-card-corp:hover .service-icon-corp {
+    background-color: var(--blue-primary);
+    color: var(--white);
+    transform: scale(1.1);
+}
+
+.bg-light.border-bottom {
+    transition: var(--transition);
+}
+
+.bg-light.border-bottom:hover {
+    background-color: #f1f8fc !important;
+}

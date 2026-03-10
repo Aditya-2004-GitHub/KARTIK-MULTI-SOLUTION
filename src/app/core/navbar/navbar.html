@@ -1,0 +1,57 @@
+<!-- Top Info Bar -->
+<div class="top-bar-corp fixed-top">
+  <div class="marquee-container">
+    <div class="marquee-content">
+      <span class="marquee-item"><i class="fas fa-phone-alt text-sun-gold"></i> <a href="tel:+919890750747">+91
+          9890750747</a></span>
+      <span class="marquee-item"><i class="fas fa-envelope text-sun-gold"></i> <a
+          href="mailto:kartik19computer@gmail.com">kartik19computer@gmail.com</a></span>
+      <span class="marquee-item"><i class="fas fa-clock text-sun-gold"></i> Mon - Sat: 9:00 AM - 6:00
+        PM</span>
+      <span class="marquee-item"><i class="fas fa-solar-panel text-sun-gold"></i> Trusted Solar EPC Partner
+        Since 2009</span>
+      <!-- Duplicate for seamless scroll -->
+      <span class="marquee-item" aria-hidden="true"><i class="fas fa-phone-alt text-sun-gold"></i> <a
+          href="tel:+919890750747">+91 9890750747</a></span>
+      <span class="marquee-item" aria-hidden="true"><i class="fas fa-envelope text-sun-gold"></i> <a
+          href="mailto:kartik19computer@gmail.com">kartik19computer@gmail.com</a></span>
+      <span class="marquee-item" aria-hidden="true"><i class="fas fa-clock text-sun-gold"></i> Mon - Sat: 9:00
+        AM - 6:00 PM</span>
+      <span class="marquee-item" aria-hidden="true"><i class="fas fa-solar-panel text-sun-gold"></i> Trusted
+        Solar EPC Partner Since 2009</span>
+    </div>
+  </div>
+</div>
+
+<!-- Corporate Navbar -->
+<nav class="navbar navbar-expand-lg navbar-corporate navbar-with-top fixed-top">
+  <div class="container">
+    <a class="navbar-brand scroll-animate slide-down" routerLink="" appScrollAnimate>
+      <img src="logo.png" alt="Kartik Multi Solutions Logo">
+    </a>
+    <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarNavCorp" aria-controls="navbarNavCorp" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <i class="fas fa-bars fs-3 text-dark"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavCorp">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item  scroll-animate slide-down delay-100" appScrollAnimate>
+          <a class="nav-link" routerLink="" (click)="closeMenu()">Home</a>
+        </li>
+        <li class="nav-item  scroll-animate slide-down delay-200" appScrollAnimate>
+          <a class="nav-link" routerLink="about" routerLinkActive="active" (click)="closeMenu()">About</a>
+        </li>
+        <li class="nav-item  scroll-animate slide-down delay-300" appScrollAnimate>
+          <a class="nav-link" routerLink="services" routerLinkActive="active" (click)="closeMenu()">Services</a>
+        </li>
+        <li class="nav-item  scroll-animate slide-down delay-400" appScrollAnimate>
+          <a class="nav-link" routerLink="projects" routerLinkActive="active" (click)="closeMenu()">Projects</a>
+        </li>
+        <li class="nav-item ms-lg-4 mt-3 mt-lg-0">
+          <a routerLink="contact" routerLinkActive="active" class="btn-corporate btn-primary-corp" (click)="closeMenu()">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

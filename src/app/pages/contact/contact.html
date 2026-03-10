@@ -1,0 +1,184 @@
+<section class="hero-corporate"
+  style="min-height: 400px; padding-top: 150px; background: linear-gradient(to right, rgba(21, 30, 41, 0.95) 0%, rgba(21, 30, 41, 0.8) 100%), url('hero.png') no-repeat center center/cover;">
+  <div class="container text-center scroll-animate slide-up" appScrollAnimate>
+    <h1 class="display-4 fw-bold">Executive <span>Connect</span></h1>
+    <p class="lead mt-3 mx-auto" style="max-width: 600px;">Engage our senior energy analysts securely for quick
+      proposals, queries, or direct large-scale project deployments today.</p>
+  </div>
+</section>
+
+<!-- Connect / Forms -->
+<section id="contactForm" class="quote-corp section-padding bg-light position-relative" style="overflow: hidden;">
+  <!-- decorative bg -->
+  <div class="position-absolute top-0 end-0 rounded-circle"
+    style="width: 500px; height: 500px; background-color: var(--blue-primary); opacity: 0.03; transform: translate(30%, -30%);">
+  </div>
+  <div class="position-absolute bottom-0 start-0 rounded-circle"
+    style="width: 300px; height: 300px; background-color: var(--sun-gold); opacity: 0.05; transform: translate(-30%, 30%);">
+  </div>
+
+  <div class="container position-relative z-1">
+    <div class="row g-5 align-items-stretch">
+      <!-- Info Side -->
+      <div class="col-lg-5 scroll-animate slide-left delay-200" appScrollAnimate>
+        <div class="bg-white p-5 rounded-4 shadow-lg h-100 d-flex flex-column border-top border-4"
+          style="border-color: var(--blue-primary) !important;">
+          <h3 class="fw-bold mb-3">Direct Communication Node</h3>
+          <p class="text-muted mb-5 fs-5">Prefer speaking to an engineering expert immediately? Utilize
+            our high-speed active communication channels deployed below.</p>
+
+          <div class="contact-info-block mt-auto">
+            <!-- Address -->
+            <div class="d-flex align-items-center mb-4 pb-4 border-bottom border-light">
+              <div
+                class="bg-light rounded-circle d-flex align-items-center justify-content-center flex-shrink-0 shadow-sm"
+                style="width: 70px; height: 70px;">
+                <i class="fas fa-map-marked-alt fs-3" style="color: var(--blue-primary);"></i>
+              </div>
+              <div class="ms-4">
+                <h6 class="fw-bold mb-1 text-uppercase small" style="letter-spacing: 1px; color: var(--blue-primary);">
+                  Corporate HQ</h6>
+                <p class="mb-0 text-dark fw-medium">Shop 7, Pande Layout,<br>Khamla Road, Nagpur</p>
+              </div>
+            </div>
+
+            <!-- Phone -->
+            <div class="d-flex align-items-center mb-4 pb-4 border-bottom border-light">
+              <div
+                class="bg-light rounded-circle d-flex align-items-center justify-content-center flex-shrink-0 shadow-sm"
+                style="width: 70px; height: 70px;">
+                <i class="fas fa-headset fs-3" style="color: var(--blue-primary);"></i>
+              </div>
+              <div class="ms-4">
+                <h6 class="fw-bold mb-1 text-uppercase small" style="letter-spacing: 1px; color: var(--blue-primary);">
+                  Support Desk Line</h6>
+                <a href="tel:+919890750747" class="text-decoration-none">
+                  <p class="mb-0 fw-bold fs-4 text-dark">+91 9890750747</p>
+                </a>
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div class="d-flex align-items-center mb-5">
+              <div
+                class="bg-light rounded-circle d-flex align-items-center justify-content-center flex-shrink-0 shadow-sm"
+                style="width: 70px; height: 70px;">
+                <i class="fas fa-envelope-open-text fs-3" style="color: var(--blue-primary);"></i>
+              </div>
+              <div class="ms-4">
+                <h6 class="fw-bold mb-1 text-uppercase small" style="letter-spacing: 1px; color: var(--blue-primary);">
+                  Electronic Mail</h6>
+                <a href="mailto:kartik19computer@gmail.com" class="text-decoration-none">
+                  <p class="mb-0 text-dark fw-medium">kartik19computer@gmail.com</p>
+                </a>
+              </div>
+            </div>
+
+            <!-- Integrated Buttons -->
+            <div class="d-flex gap-3">
+              <a href="tel:+919890750747"
+                class="btn btn-outline-dark flex-grow-1 py-3 fw-bold rounded-pill text-uppercase"
+                style="letter-spacing: 1px; font-size: 0.85rem;"><i class="fas fa-phone-alt me-2"></i> Voice Call</a>
+              <a [href]="whatsappLink" target="_blank"
+                class="btn btn-success flex-grow-1 py-3 fw-bold rounded-pill text-uppercase border-0"
+                style="background-color: #25D366; letter-spacing: 1px; font-size: 0.85rem;"><i
+                  class="fab fa-whatsapp fs-5 me-2 align-middle"></i> WhatsApp</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form Side -->
+      <div class="col-lg-7 scroll-animate slide-right delay-100" appScrollAnimate>
+        <div class="quote-wrap-corp bg-white rounded-4 shadow-lg p-5 h-100 position-relative">
+          <!-- small decorative accent -->
+          <div class="position-absolute top-0 end-0 p-4">
+            <i class="fas fa-paper-plane fs-1 opacity-25" style="color: var(--blue-primary);"></i>
+          </div>
+
+          <h3 class="fw-bold mb-2">Inquiry & Proposal Request</h3>
+          <p class="text-muted mb-5 border-bottom pb-4">Fill out the parameters carefully. Our routing
+            engine actively dispatches this data to our senior WhatsApp handling node ensuring immediate
+            query response securely.</p>
+
+          <form id="contactFormCorp">
+            <div class="row g-4">
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <input type="text" class="form-control rounded-1 bg-light border-0 shadow-none px-4" id="contact-name"
+                    placeholder="Name" required style="height: 60px;">
+                  <label for="contact-name" class="text-muted small ps-4">Legal Designation Name
+                    *</label>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <input type="tel" class="form-control rounded-1 bg-light border-0 shadow-none px-4" id="contact-phone"
+                    placeholder="Phone" required style="height: 60px;">
+                  <label for="contact-phone" class="text-muted small ps-4">Mobile Parameter Number
+                    *</label>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <input type="email" class="form-control rounded-1 bg-light border-0 shadow-none px-4"
+                    id="contact-email" placeholder="Email" style="height: 60px;">
+                  <label for="contact-email" class="text-muted small ps-4">Corporate or Personal
+                    Email</label>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <input type="text" class="form-control rounded-1 bg-light border-0 shadow-none px-4"
+                    id="contact-location" placeholder="City" required style="height: 60px;">
+                  <label for="contact-location" class="text-muted small ps-4">Site Coordinates /
+                    City Area *</label>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-floating">
+                  <select class="form-select rounded-1 bg-light border-0 shadow-none px-4" id="contact-req"
+                    style="height: 60px; padding-top: 25px;">
+                    <option value="General Inquiry" selected>General Pre-Sales Inquiry</option>
+                    <option value="Residential Solar">Residential Grid Requirement</option>
+                    <option value="Commercial Solar">Industrial/Commercial Solar Phase</option>
+                    <option value="MSEDCL Application">MSEDCL State Application Matrix</option>
+                  </select>
+                  <label for="contact-req" class="text-muted small ps-4">Nature of Requirement
+                    Topology</label>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-floating">
+                  <textarea class="form-control rounded-1 bg-light border-0 shadow-none px-4 pt-4" id="contact-message"
+                    placeholder="Message" style="height: 150px; resize: none;"></textarea>
+                  <label for="contact-message" class="text-muted small ps-4">Technical Overview /
+                    Essential Remarks</label>
+                </div>
+              </div>
+              <div class="col-12 mt-5">
+                <button type="submit"
+                  class="btn btn-primary w-100 py-3 fw-bold fs-5 rounded-1 border-0 shadow-sm transition-hover"
+                  style="background-color: var(--blue-primary);">Transmit Query Over Secure
+                  Node</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Map Section Embed -->
+    <div class="row mt-5 pt-4">
+      <div class="col-12 scroll-animate delay-100" appScrollAnimate>
+        <div class="bg-white p-3 rounded-4 shadow-sm border border-light">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119066.41709462847!2d78.9628805021884!3d21.161085942485547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c0a5a31faf13%3A0x19b37d06d0bb3e2b!2sNagpur%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1714000000000!5m2!1sen!2sin"
+            width="100%" height="400" style="border:0; border-radius: 12px; filter: grayscale(20%) contrast(1.1);"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

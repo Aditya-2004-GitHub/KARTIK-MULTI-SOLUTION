@@ -1,0 +1,627 @@
+/* Hero Corporate */
+.hero-corporate {
+    position: relative;
+    height: 100vh;
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+    color: var(--white);
+    padding-top: 80px;
+    background-color: #0b1a2e;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.hero-corporate-bg {
+    position: absolute;
+    top: -5%;
+    left: -5%;
+    right: -5%;
+    bottom: -5%;
+    background: url('../../../../public/solar_dawn.png') no-repeat center center / cover;
+    z-index: -3;
+    animation: morning-pan 20s linear infinite alternate;
+}
+
+.sunrise-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* Starts dark, then light spreads */
+    background: linear-gradient(to right, rgba(11, 26, 46, 0.95) 0%, rgba(11, 26, 46, 0.95) 100%);
+    z-index: -1;
+    animation: full-day-shift 15s linear infinite;
+    pointer-events: none;
+}
+
+.animated-sun {
+    position: absolute;
+    bottom: -300px;
+    left: -10%;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, #ffffff 0%, #fffcdd 15%, #ffcc00 30%, rgba(255, 136, 0, 0) 65%);
+    border-radius: 50%;
+    z-index: -2;
+    mix-blend-mode: screen;
+    box-shadow: 0 0 120px 60px rgba(255, 204, 0, 0.4);
+    animation: sun-orbit 15s linear infinite;
+}
+
+@keyframes morning-pan {
+    0% {
+        transform: scale(1) translate(0, 0);
+    }
+
+    100% {
+        transform: scale(1.05) translate(-1%, 1%);
+    }
+}
+
+@keyframes full-day-shift {
+
+    0%,
+    100% {
+        background: linear-gradient(to right, rgba(11, 26, 46, 0.95) 0%, rgba(11, 26, 46, 0.95) 100%);
+        backdrop-filter: brightness(0.6);
+        opacity: 1;
+    }
+
+    50% {
+        background: linear-gradient(to right, rgba(11, 26, 46, 0.4) 0%, rgba(255, 204, 0, 0.2) 100%);
+        backdrop-filter: brightness(1.2);
+        opacity: 1;
+    }
+}
+
+@keyframes sun-orbit {
+    0% {
+        top: 70%;
+        left: -10%;
+        transform: scale(0.8);
+        opacity: 0;
+        box-shadow: 0 0 80px 40px rgba(255, 136, 0, 0.4);
+    }
+
+    15% {
+        opacity: 1;
+        box-shadow: 0 0 100px 50px rgba(255, 204, 0, 0.5);
+    }
+
+    50% {
+        top: 10%;
+        left: 50%;
+        transform: scale(1.2);
+        opacity: 1;
+        box-shadow: 0 0 200px 100px rgba(255, 255, 255, 0.6);
+    }
+
+    85% {
+        opacity: 1;
+        box-shadow: 0 0 100px 50px rgba(255, 136, 0, 0.6);
+    }
+
+    100% {
+        top: 70%;
+        left: 110%;
+        transform: scale(0.8);
+        opacity: 0;
+        box-shadow: 0 0 80px 40px rgba(255, 136, 0, 0.3);
+    }
+}
+
+.hero-corp-content {
+    max-width: 600px;
+}
+
+.hero-corporate h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    font-weight: 800;
+    margin-bottom: 25px;
+    color: var(--white);
+}
+
+.hero-corporate h1 span {
+    color: var(--blue-primary);
+}
+
+.hero-corporate p {
+    font-size: 1.15rem;
+    margin-bottom: 35px;
+    opacity: 0.9;
+    line-height: 1.8;
+}
+
+.hero-actions-corp {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
+}
+
+/* About Layout */
+.about-corp {
+    background-color: var(--white);
+}
+
+.about-corp-img {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.about-corp-img img {
+    width: 100%;
+}
+
+.corp-badge {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: var(--blue-primary);
+    color: var(--white);
+    padding: 30px;
+    border-top-right-radius: 30px;
+}
+
+.corp-badge h2 {
+    font-size: 2.5rem;
+    color: var(--white);
+    margin-bottom: 0;
+}
+
+/* Services */
+.services-corp {
+    background-color: var(--bg-light);
+}
+
+.service-card-corp {
+    background: var(--white);
+    padding: 40px 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
+    transition: var(--transition);
+    height: 100%;
+    border-bottom: 4px solid transparent;
+    text-align: left;
+}
+
+.service-card-corp:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--box-shadow);
+    border-bottom-color: var(--blue-primary);
+}
+
+.service-icon-corp {
+    font-size: 3rem;
+    color: var(--blue-primary);
+    margin-bottom: 20px;
+    display: inline-block;
+    background: rgba(0, 150, 219, 0.1);
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    border-radius: 8px;
+    transition: var(--transition);
+}
+
+.service-card-corp:hover .service-icon-corp {
+    background: var(--blue-primary);
+    color: var(--white);
+    border-radius: 50%;
+}
+
+.service-card-corp h4 {
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.service-card-corp p {
+    color: var(--text-body);
+    font-size: 0.95rem;
+    margin-bottom: 0;
+}
+
+/* Attributes / Why Choose Us */
+.attributes-corp {
+    background-color: var(--white);
+}
+
+.attr-item-corp {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.attr-icon-corp {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    background: var(--blue-primary);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    font-size: 1.5rem;
+    margin-right: 20px;
+}
+
+.attr-content-corp h5 {
+    font-size: 1.15rem;
+    margin-bottom: 8px;
+}
+
+.attr-content-corp p {
+    font-size: 0.95rem;
+    margin-bottom: 0;
+}
+
+/* Customers / Gallery */
+.customers-corp {
+    background-color: var(--slate-dark);
+    color: var(--white);
+}
+
+.customers-corp .section-title h2,
+.customers-corp .section-title p {
+    color: var(--white);
+}
+
+.customer-card-corp {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.customer-card-corp img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+}
+
+.customer-over-corp {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(21, 30, 41, 0.85);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.customer-over-corp h4 {
+    color: var(--sun-gold);
+    margin-bottom: 10px;
+    transform: translateY(20px);
+    transition: var(--transition);
+}
+
+.customer-over-corp p {
+    color: var(--white);
+    transform: translateY(20px);
+    transition: var(--transition);
+    transition-delay: 0.1s;
+}
+
+.customer-card-corp:hover img {
+    transform: scale(1.1);
+}
+
+.customer-card-corp:hover .customer-over-corp {
+    opacity: 1;
+}
+
+.customer-card-corp:hover h4,
+.customer-card-corp:hover p {
+    transform: translateY(0);
+}
+
+/* Quote Process Flow */
+.quote-corp {
+    background-color: var(--bg-light);
+}
+
+.quote-wrap-corp {
+    background: var(--white);
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.form-control-corp,
+.form-select-corp {
+    padding: 14px 20px;
+    border-radius: 4px;
+    border: 1px solid #e0e6ed;
+    background: var(--bg-light);
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-dark);
+    transition: var(--transition);
+}
+
+.form-control-corp:focus,
+.form-select-corp:focus {
+    background: var(--white);
+    border-color: var(--blue-primary);
+    box-shadow: none;
+    outline: none;
+}
+
+/* Floating Elements */
+.whatsapp-float-corp {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 60px;
+    height: 60px;
+    background-color: #25d366;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4);
+    z-index: 1000;
+    transition: var(--transition);
+}
+
+.whatsapp-float-corp:hover {
+    transform: scale(1.1) rotate(5deg);
+    color: white;
+    box-shadow: 0 8px 30px rgba(37, 211, 102, 0.5);
+}
+
+/* Info Bar Top Marquee */
+.top-bar-corp {
+    background-color: var(--blue-primary);
+    color: var(--white);
+    padding: 8px 0;
+    font-size: 0.85rem;
+    overflow: hidden;
+    height: 38px;
+    display: flex;
+    align-items: center;
+}
+
+.text-sun-gold {
+    color: var(--sun-gold) !important;
+}
+
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.marquee-content {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll-left 25s linear infinite;
+}
+
+.marquee-content:hover {
+    animation-play-state: paused;
+}
+
+.marquee-item {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 50px;
+}
+
+.marquee-item a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.marquee-item i {
+    margin-right: 6px;
+}
+
+.marquee-item a:hover {
+    text-decoration: underline;
+}
+
+.navbar-with-top {
+    top: 38px;
+    /* Adjust for top bar */
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Media Queries */
+@media (max-width: 991.98px) {
+    .hero-corporate {
+        min-height: auto;
+        padding-top: 150px;
+        padding-bottom: 80px;
+    }
+
+    .hero-corporate h1 {
+        font-size: 2.8rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .top-bar-corp {
+        display: none;
+    }
+
+    .navbar-with-top {
+        top: 0;
+    }
+
+    .hero-corporate h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-actions-corp {
+        flex-direction: column;
+        align-items: center;
+        /* fix buttons sticking to full width here too! */
+    }
+
+    /* Make sure buttons take normal layout padding, not block 100%, but center them */
+    .hero-actions-corp .btn-corporate {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .whatsapp-float-corp {
+        bottom: 25px;
+        right: 25px;
+        width: 50px;
+        height: 50px;
+        font-size: 1.8rem;
+    }
+}
+
+/* Solar Background Animation Elements */
+.solar-bg-animations {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.floating-sun {
+    position: absolute;
+    color: rgba(255, 193, 7, 0.08);
+    font-size: 25rem;
+    top: -10%;
+    right: -10%;
+    animation: rotate-sun 60s linear infinite;
+    z-index: 0;
+    filter: drop-shadow(0 0 40px rgba(255, 193, 7, 0.2));
+}
+
+.floating-panel {
+    position: absolute;
+    color: rgba(0, 150, 219, 0.05);
+    /* very light blue opacity */
+    font-size: 8rem;
+    animation: float-obj 8s ease-in-out infinite;
+    z-index: 0;
+    filter: drop-shadow(0 0 10px rgba(0, 150, 219, 0.1));
+}
+
+.floating-panel.p1 {
+    top: 15%;
+    left: 5%;
+    animation-delay: 0s;
+    font-size: 18rem;
+}
+
+.floating-panel.p2 {
+    top: 50%;
+    right: 10%;
+    animation-delay: 2s;
+    font-size: 12rem;
+}
+
+.floating-panel.p3 {
+    top: 70%;
+    left: 10%;
+    animation-delay: 4s;
+    font-size: 14rem;
+}
+
+@keyframes rotate-sun {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes float-obj {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(-5deg);
+    }
+
+    50% {
+        transform: translateY(-30px) rotate(5deg);
+    }
+}
+
+@keyframes float-particle {
+    0% {
+        transform: translateY(0) scale(0);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.6;
+        scale: 1;
+    }
+
+    100% {
+        transform: translateY(-150px) scale(0);
+        opacity: 0;
+    }
+}
+
+.solar-particle {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: #FFC107;
+    /* sun gold */
+    border-radius: 50%;
+    box-shadow: 0 0 12px 2px #FFC107;
+    animation: float-particle 4s ease-in infinite;
+}
+
+/* Ensure sections contain the absolute elements safely without affecting layout */
+.hero-corporate,
+.about-corp,
+.services-corp,
+.attributes-corp,
+.customers-corp,
+.quote-corp {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Ensure content sits above the flowing background animations */
+.hero-corporate .container,
+.about-corp .container,
+.services-corp .container,
+.attributes-corp .container,
+.customers-corp .container,
+.quote-corp .container {
+    position: relative;
+    z-index: 1;
+}

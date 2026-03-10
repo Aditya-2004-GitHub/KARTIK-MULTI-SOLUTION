@@ -1,0 +1,35 @@
+.error-container {
+  text-align: center;
+  z-index: 10;
+}
+
+.error-code {
+  font-size: clamp(8rem, 20vw, 12rem);
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 0;
+  background: linear-gradient(to bottom, var(--sun-gold), var(--white));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 20px rgba(255, 179, 0, 0.3));
+  animation: pulse-glow 3s infinite ease-in-out;
+}
+
+@keyframes pulse-glow {
+
+  0%,
+  100% {
+    filter: drop-shadow(0 0 20px rgba(255, 179, 0, 0.3));
+  }
+
+  50% {
+    filter: drop-shadow(0 0 40px rgba(255, 179, 0, 0.6));
+  }
+}
+
+.error-message {
+  font-size: 1.5rem;
+  color: var(--white);
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}

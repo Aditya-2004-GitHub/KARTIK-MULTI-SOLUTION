@@ -1,1 +1,602 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --blue-primary: #0096db;
+  --blue-hover: #007ebb;
+  --sun-gold: #ffb300;
+  --sun-gold-hover: #e6a100;
+  --text-dark: #2c3e50;
+  --text-body: #546e7a;
+  --bg-light: #f8fbfe;
+  --white: #ffffff;
+  --slate-dark: #151e29;
+  --slate-medium: #1e2a38;
+  --transition: all 0.3s ease;
+  --box-shadow: 0 5px 20px rgba(0, 150, 219, 0.08);
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: var(--text-body);
+  background-color: var(--white);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+a {
+  text-decoration: none;
+  color: var(--blue-primary);
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--blue-hover);
+}
+
+/* Custom Buttons */
+.btn-corporate {
+  padding: 12px 30px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 2px solid transparent;
+}
+
+.btn-primary-corp {
+  background-color: var(--blue-primary);
+  color: var(--white);
+  box-shadow: 0 4px 15px rgba(0, 150, 219, 0.3);
+}
+
+.btn-primary-corp:hover {
+  background-color: var(--blue-hover);
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 150, 219, 0.4);
+}
+
+.btn-accent-corp {
+  background-color: var(--sun-gold);
+  color: var(--slate-dark);
+}
+
+.btn-accent-corp:hover {
+  background-color: var(--sun-gold-hover);
+  color: var(--slate-dark);
+  transform: translateY(-2px);
+}
+
+.btn-outline-corp {
+  background-color: transparent;
+  color: var(--blue-primary);
+  border-color: var(--blue-primary);
+}
+
+.btn-outline-corp:hover {
+  background-color: var(--blue-primary);
+  color: var(--white);
+}
+
+.btn-whatsapp-corp {
+  background-color: #25d366;
+  color: #fff;
+  border-color: #25d366;
+}
+
+.btn-whatsapp-corp:hover {
+  background-color: transparent;
+  color: #25d366;
+}
+
+/* Section Commons */
+.section-padding {
+  padding: 90px 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-title h6 {
+  color: var(--blue-primary);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.section-title h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: var(--text-dark);
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.section-title h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background-color: var(--sun-gold);
+}
+
+.section-title p {
+  max-width: 650px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  color: var(--text-body);
+}
+
+/* Navbar */
+.navbar-corporate {
+  background-color: var(--white);
+  padding: 15px 0;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+  transition: var(--transition);
+}
+
+.navbar-corporate.compact {
+  padding: 8px 0;
+}
+
+.navbar-corporate .navbar-brand img {
+  height: 50px;
+}
+
+.navbar-corporate .nav-link {
+  color: var(--text-dark);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin: 0 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: var(--transition);
+}
+
+.navbar-corporate .nav-link:hover,
+.navbar-corporate .nav-link.active {
+  color: var(--blue-primary);
+}
+
+/* Footer Section */
+.footer-corporate {
+  background-color: var(--slate-dark);
+  color: #aebecb;
+  padding: 70px 0 20px;
+  font-size: 0.95rem;
+}
+
+.footer-corporate h5 {
+  color: var(--white);
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.footer-corporate h5::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 30px;
+  height: 2px;
+  background-color: var(--blue-primary);
+}
+
+.footer-corporate ul li {
+  margin-bottom: 10px;
+}
+
+.footer-corporate ul li a {
+  color: #aebecb;
+  transition: var(--transition);
+}
+
+.footer-corporate ul li a:hover {
+  color: var(--sun-gold);
+  padding-left: 5px;
+}
+
+.footer-corporate .social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--white);
+  border-radius: 4px;
+  margin-right: 8px;
+  transition: var(--transition);
+}
+
+.footer-corporate .social-icon:hover {
+  background-color: var(--blue-primary);
+  transform: translateY(-3px);
+}
+
+.footer-bottom-corporate {
+  margin-top: 50px;
+  padding-top: 25px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+.hero-corporate {
+    position: relative;
+    height: 100vh;
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+    color: var(--white);
+    padding-top: 80px;
+    background-color: #0b1a2e;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.hero-corp-content {
+    max-width: 600px;
+}
+
+.hero-corporate h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    font-weight: 800;
+    margin-bottom: 25px;
+    color: var(--white);
+}
+
+.hero-corporate h1 span {
+    color: var(--blue-primary);
+}
+
+.hero-corporate p {
+    font-size: 1.15rem;
+    margin-bottom: 35px;
+    opacity: 0.9;
+    line-height: 1.8;
+}
+
+.hero-actions-corp {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
+}
+
+/* ========================================================================= */
+/* Icons size */
+/* ========================================================================= */
+
+.fa-chart-pie, .fa-file-contract, .fa-file-signature {
+  font-size: 4rem;
+}
+
+/* ========================================================================= */
+/* Global Floating Objects Everywhere */
+/* ========================================================================= */
+
+.global-solar-objects {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+.global-solar-objects i {
+  position: absolute;
+  color: rgba(0, 150, 219, 0.3);
+  font-size: 2.5rem;
+  animation: float-everywhere 15s linear infinite;
+  filter: drop-shadow(0 0 8px rgba(0, 150, 219, 0.4));
+}
+
+.global-solar-objects .obj1 {
+  top: -10%;
+  left: 10%;
+  font-size: 2rem;
+  color: rgba(37, 211, 102, 0.3);
+  animation-duration: 25s;
+  animation-delay: 0s;
+  filter: drop-shadow(0 0 8px rgba(37, 211, 102, 0.4));
+}
+
+.global-solar-objects .obj2 {
+  top: -10%;
+  left: 30%;
+  font-size: 3rem;
+  animation-duration: 20s;
+  animation-delay: 3s;
+}
+
+.global-solar-objects .obj3 {
+  top: -10%;
+  left: 50%;
+  font-size: 1.8rem;
+  color: rgba(255, 193, 7, 0.3);
+  animation-duration: 22s;
+  animation-delay: 7s;
+  filter: drop-shadow(0 0 8px rgba(255, 193, 7, 0.4));
+}
+
+.global-solar-objects .obj4 {
+  top: -10%;
+  left: 70%;
+  font-size: 2.5rem;
+  animation-duration: 18s;
+  animation-delay: 1s;
+}
+
+.global-solar-objects .obj5 {
+  top: -10%;
+  left: 85%;
+  font-size: 3.5rem;
+  color: rgba(255, 193, 7, 0.25);
+  animation-duration: 26s;
+  animation-delay: 5s;
+}
+
+.global-solar-objects .obj6 {
+  top: -10%;
+  left: 20%;
+  font-size: 2.2rem;
+  animation-duration: 21s;
+  animation-delay: 9s;
+}
+
+.global-solar-objects .obj7 {
+  top: -10%;
+  left: 60%;
+  font-size: 2.8rem;
+  animation-duration: 24s;
+  animation-delay: 11s;
+}
+
+.global-solar-objects .obj8 {
+  top: -10%;
+  left: 40%;
+  font-size: 2rem;
+  color: rgba(37, 211, 102, 0.3);
+  animation-duration: 19s;
+  animation-delay: 13s;
+}
+
+@keyframes float-everywhere {
+  0% {
+    transform: translateY(-100px) rotate(0deg) scale(0.8);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+    scale: 1;
+  }
+
+  90% {
+    opacity: 1;
+    scale: 1;
+  }
+
+  100% {
+    transform: translateY(110vh) rotate(360deg) scale(0.8);
+    opacity: 0;
+  }
+}
+
+/* ========================================================================= */
+/* Scroll Animations & Solar Effects */
+/* ========================================================================= */
+
+.scroll-animate {
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.scroll-animate.slide-up {
+    transform: translateY(50px);
+}
+
+.scroll-animate.slide-left {
+    transform: translateX(-50px);
+}
+
+.scroll-animate.slide-right {
+    transform: translateX(50px);
+}
+
+.scroll-animate.zoom-in {
+    transform: scale(0.9);
+}
+
+.scroll-animate.active {
+    opacity: 1;
+    transform: translate(0) scale(1);
+}
+
+/* Delay modifiers for sequential animations */
+.delay-100 {
+    transition-delay: 0.1s;
+}
+
+.delay-200 {
+    transition-delay: 0.2s;
+}
+
+.delay-300 {
+    transition-delay: 0.3s;
+}
+
+.delay-400 {
+    transition-delay: 0.4s;
+}
+
+/* Animated Solar-Themed Scrollbar */
+
+/* ================================
+   Solar Animated Scrollbar
+================================ */
+
+/* Highly Animated Solar-Themed Scrollbar - Enhanced Version */
+
+/* Firefox support */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--sun-gold) var(--bg-light);
+}
+
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+    width: 14px;
+    height: 14px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--light-bg);
+    position: relative;
+    /* Animated grid pattern background */
+    background-image: 
+        radial-gradient(circle at 25% 25%, transparent 10px, var(--light-bg) 11px),
+        radial-gradient(circle at 75% 75%, transparent 10px, var(--light-bg) 11px);
+    background-size: 20px 20px;
+    animation: gridShift 8s linear infinite;
+}
+
+@keyframes gridShift {
+    0% { background-position: 0 0, 0 0; }
+    100% { background-position: 20px 20px, -20px -20px; }
+}
+
+::-webkit-scrollbar-thumb {
+    position: relative;
+    background: linear-gradient(45deg, var(--sun-gold) 0%, #fff7e6 30%, var(--sun-gold-hover) 70%, transparent 100%);
+    background-size: 300% 300%;
+    border-radius: 25px;
+    border: 3px solid var(--light-bg);
+    box-shadow: 
+        inset 0 0 5px rgba(255, 215, 0, 0.3),
+        0 0 10px rgba(255, 215, 0, 0.2);
+    animation: solarPulse 2s ease-in-out infinite alternate;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    overflow: hidden;
+}
+
+@keyframes solarPulse {
+    0% {
+        box-shadow: 
+            inset 0 0 5px rgba(255, 215, 0, 0.3),
+            0 0 10px rgba(255, 215, 0, 0.2),
+            0 0 0 rgba(255, 193, 7, 0);
+        transform: scale(1);
+    }
+    100% {
+        box-shadow: 
+            inset 0 0 10px rgba(255, 215, 0, 0.6),
+            0 0 20px rgba(255, 215, 0, 0.4),
+            0 0 25px rgba(255, 193, 7, 0.6);
+        transform: scale(1.05);
+        background-position: 100% 100%;
+    }
+}
+
+/* Animated shine effect particles */
+::-webkit-scrollbar-thumb::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: 
+        radial-gradient(circle, rgba(255,255,255,0.8) 1px, transparent 1px),
+        radial-gradient(circle, rgba(255,255,255,0.4) 0.5px, transparent 0.5px);
+    background-size: 20px 20px, 10px 10px;
+    animation: sparkle 1.5s linear infinite;
+    opacity: 0;
+}
+
+@keyframes sparkle {
+    0% { transform: translateX(-100%) translateY(-100%) rotate(0deg); opacity: 0; }
+    50% { opacity: 1; }
+    100% { transform: translateX(100%) translateY(100%) rotate(360deg); opacity: 0; }
+}
+
+::-webkit-scrollbar-thumb:hover {
+    animation-duration: 0.8s;
+    background-size: 400% 400%;
+    transform: scale(1.1) !important;
+    box-shadow: 
+        inset 0 0 15px rgba(255, 215, 0, 0.8),
+        0 0 30px rgba(255, 193, 7, 0.8),
+        0 0 50px rgba(0, 123, 255, 0.4);
+}
+
+::-webkit-scrollbar-thumb:active {
+    animation: none;
+    background: linear-gradient(180deg, var(--blue-primary) 0%, #e0f4ff 50%, var(--blue-hover) 100%) !important;
+    background-size: 100% 200% !important;
+    background-position: bottom !important;
+    border-width: 1px;
+    transform: scale(1.15) !important;
+    box-shadow: 
+        0 0 0 1px var(--light-bg),
+        0 0 40px rgba(0, 150, 219, 1),
+        inset 0 0 20px rgba(255,255,255,0.5);
+}
+
+/* Energy flow line animation when scrolling */
+body:has(::-webkit-scrollbar-thumb:active)::-webkit-scrollbar-track {
+    background-image: 
+        linear-gradient(90deg, transparent 30%, rgba(255,215,0,0.1) 50%, transparent 70%),
+        radial-gradient(circle at 25% 25%, transparent 10px, var(--light-bg) 11px),
+        radial-gradient(circle at 75% 75%, transparent 10px, var(--light-bg) 11px);
+    animation-duration: 0.5s;
+}
+
+/* Corner flares for extra drama */
+::-webkit-scrollbar-corner {
+    background: var(--light-bg);
+}
+
+::-webkit-scrollbar-corner::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle, rgba(255,215,0,0.3) 0%, transparent 70%);
+    animation: cornerFlare 3s ease-in-out infinite;
+}
+
+@keyframes cornerFlare {
+    0%, 100% { opacity: 0.3; transform: scale(1); }
+    50% { opacity: 0.8; transform: scale(1.2); }
+}

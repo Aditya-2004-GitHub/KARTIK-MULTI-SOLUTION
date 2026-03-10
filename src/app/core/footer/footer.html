@@ -1,0 +1,69 @@
+<!-- Corporate Footer -->
+<footer class="footer-corporate">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-4 col-md-6 scroll-animate slide-left" appScrollAnimate>
+        <div class="bg-white d-inline-block p-2 rounded mb-4">
+          <img src="logo.png" alt="Kartik Multi Solutions" style="height: 50px;">
+        </div>
+        <p class="pe-lg-4 mb-4" style="line-height: 1.8;">Delivering robust solar EPC infrastructures backed
+          by extensive electrical insight and reliable state authority coordination. Pioneering large
+          scale commercial grid shifts across the state since 2009.</p>
+      </div>
+
+      <div class="col-lg-2 col-md-6 scroll-animate slide-up delay-100" appScrollAnimate>
+        <h5>Navigation</h5>
+        <ul class="list-unstyled">
+          <li><a routerLink="" routerLinkActive="active"><i class="fas fa-chevron-right me-2 small"></i> Home</a></li>
+          <li><a routerLink="about" routerLinkActive="active"><i class="fas fa-chevron-right me-2 small"></i> About Us</a>
+          </li>
+          <li><a routerLink="services" routerLinkActive="active"><i class="fas fa-chevron-right me-2 small"></i> Services</a>
+          </li>
+          <li><a routerLink="projects" routerLinkActive="active"><i class="fas fa-chevron-right me-2 small"></i> Projects</a>
+          </li>
+          <li><a routerLink="contact" routerLinkActive="active"><i class="fas fa-chevron-right me-2 small"></i> Contact Us</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-lg-3 col-md-6 scroll-animate slide-up delay-100" appScrollAnimate>
+        <h5>Core Offerings</h5>
+        <ul class="list-unstyled">
+          <li><a routerLink="services"><i class="fas fa-angle-right me-2 text-primary"></i> Macro EPC
+              Projects</a></li>
+          <li><a routerLink="services"><i class="fas fa-angle-right me-2 text-primary"></i> Site
+              Mountings</a>
+          </li>
+          <li><a routerLink="services"><i class="fas fa-angle-right me-2 text-primary"></i> MSEDCL
+              Licensing</a></li>
+          <li><a routerLink="services"><i class="fas fa-angle-right me-2 text-primary"></i> Energy Metrics
+              &
+              Audits</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-3 col-md-6 scroll-animate slide-right" appScrollAnimate>
+        <h5>Executive Connect</h5>
+        <div class="mb-4">
+          <h6 class="text-white mb-2"><i class="fas fa-phone-alt text-primary me-2"></i> Support Desk</h6>
+          <p class="mb-0 fs-5">+91 9890750747</p>
+        </div>
+        <div>
+          <a [href]="whatsappLink" target="_blank"
+            class="btn-corporate btn-whatsapp-corp border-0 shadow-none px-4 py-2 w-100 text-center justify-content-center d-flex fw-bold">
+            <i class="fab fa-whatsapp fs-5 me-2"></i> Client Connect
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom-corporate text-center">
+      <p class="mb-0">&copy; 2026 <strong>KARTIK MULTI SOLUTIONS</strong>. All Architectural Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Corporate WhatsApp Flot -->
+<a [href]="whatsappLink" target="_blank" class="whatsapp-float-corp scroll-animate slide-right delay-100" title="Open Client Portal" appScrollAnimate>
+  <i class="fab fa-whatsapp"></i>
+</a>

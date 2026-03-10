@@ -1,0 +1,106 @@
+/* Info Bar Top Marquee */
+.top-bar-corp {
+  background-color: var(--blue-primary);
+  color: var(--white);
+  padding: 8px 0;
+  font-size: 0.85rem;
+  overflow: hidden;
+  height: 38px;
+  display: flex;
+  align-items: center;
+}
+
+.text-sun-gold {
+  color: var(--sun-gold) !important;
+}
+
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marquee-content {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll-left 25s linear infinite;
+}
+
+.marquee-content:hover {
+  animation-play-state: paused;
+}
+
+.marquee-item {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 50px;
+}
+
+.marquee-item a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.marquee-item i {
+  margin-right: 6px;
+}
+
+.marquee-item a:hover {
+  text-decoration: underline;
+}
+
+.navbar-with-top {
+  top: 38px;
+  /* Adjust for top bar */
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Media Queries */
+@media (max-width: 991.98px) {
+  .hero-corporate {
+    min-height: auto;
+    padding-top: 150px;
+    padding-bottom: 80px;
+  }
+
+  .hero-corporate h1 {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .top-bar-corp {
+    display: none;
+  }
+
+  .navbar-with-top {
+    top: 0;
+  }
+
+  .hero-corporate h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-actions-corp {
+    flex-direction: column;
+    align-items: center;
+    /* fix buttons sticking to full width here too! */
+  }
+
+  /* Make sure buttons take normal layout padding, not block 100%, but center them */
+  .hero-actions-corp .btn-corporate {
+    width: 100%;
+    max-width: 300px;
+  }
+
+}
+

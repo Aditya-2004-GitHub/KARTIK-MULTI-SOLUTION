@@ -1,0 +1,37 @@
+/* About Page Specific Styles */
+.about-corp-img {
+    position: relative;
+}
+
+.about-corp-img img {
+    border-radius: 8px;
+}
+
+.corp-badge {
+    border-top-left-radius: 20px;
+    box-shadow: -5px -5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.strength-card {
+    transition: var(--transition);
+    border: 1px solid transparent;
+}
+
+.strength-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--box-shadow) !important;
+    border-color: rgba(0, 150, 219, 0.2);
+    background-color: var(--white) !important;
+}
+
+.icon-wrap {
+    transition: var(--transition);
+}
+
+.strength-card:hover .icon-wrap {
+    background-color: var(--blue-primary) !important;
+}
+
+.strength-card:hover .icon-wrap i {
+    color: var(--white) !important;
+}
